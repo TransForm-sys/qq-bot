@@ -2,6 +2,7 @@
     "name": "qq-bot",
     "version": "0.3.0",
     "description": "零注入的 QQ 聊天机器人：接收读 Windows 通知库，发送走 UI 自动化，模型可换。",
+    "license": "MIT",
     "private": true,
     "type": "module",
     "engines": {
