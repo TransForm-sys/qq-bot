@@ -1,0 +1,60 @@
+{
+  "botUin": "请填机器人 QQ 号",
+  "storagePath": "C:/Users/<you>/Documents/Tencent Files",
+  "receive": "notify",
+  "receiveIntervalMs": 1500,
+  "botName": "请填机器人 QQ 昵称（必须与 QQ 完全一致）",
+  "personaFile": "persona.md",
+  "reply": {
+    "private": true,
+    "groups": [],
+    "minIntervalMs": 1200,
+    "maxPerMinute": 8,
+    "readDelayMs": [500, 1600],
+    "typingSpeedCps": 14,
+    "maxTypingMs": 3500,
+    "splitSegments": 2,
+    "quietHours": { "enabled": false, "start": "23:30", "end": "08:00" },
+    "verifySend": true,
+    "staleAfterMs": 600000,
+    "sendIdleMs": 45000,
+    "sendMaxWaitMs": 600000
+  },
+  "models": {
+    "default": "deepseek/deepseek-flash",
+    "private": "deepseek/deepseek-flash",
+    "group": "deepseek/deepseek-flash",
+    "temperature": 0.8,
+    "maxTokens": 512,
+    "timeoutMs": 60000,
+    "retries": 2,
+    "fallback": true,
+    "fallbackChain": [],
+    "historyTokens": 3000
+  },
+  "providers": [
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "kind": "openai",
+      "baseURL": "https://api.deepseek.com/v1",
+      "apiKey": "sk-替换成你自己的-key",
+      "models": ["deepseek-flash"],
+      "enabled": true,
+      "priority": 1,
+      "rpm": 0,
+      "apiVersion": "",
+      "note": ""
+    }
+  ],
+  "plugins": { "disabled": [] },
+  "search": {
+    "enabled": true,
+    "provider": "auto",
+    "apiKey": "",
+    "maxResults": 5,
+    "maxRounds": 2,
+    "maxCalls": 3
+  },
+  "webui": { "port": 8787, "host": "127.0.0.1", "token": "" }
+}

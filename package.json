@@ -1,0 +1,17 @@
+{
+    "name": "qq-bot",
+    "version": "0.3.0",
+    "description": "零注入的 QQ 聊天机器人：接收读 Windows 通知库，发送走 UI 自动化，模型可换。",
+    "private": true,
+    "type": "module",
+    "engines": {
+        "node": ">=22.18"
+    },
+    "scripts": {
+        "bot": "node src/index.ts",
+        "webui": "node src/webui.ts",
+        "hub": "node src/hub.ts",
+        "doctor": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/doctor.ps1",
+        "test:plain": "node tools/test-plain.mjs"
+    }
+}
